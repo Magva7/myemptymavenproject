@@ -3,7 +3,14 @@ public class Main {
 //        System.out.println("Hello World!");
 //
 
-        int arg1 = 0;
-        System.out.println(arg1);
+//        int arg1;
+//        System.out.println(arg1 + 10);
+
+
+
+    }
+
+    public static int getAverageNumber(int arg1) {
+        return 545;
     }
 }
