@@ -24,10 +24,6 @@ public class Main {
         /**Выводим сумму, деленную на 3*/
         System.out.println("Сумма аргументов, деленная на 3 равна: " +average);
 
-        /**Произведение 3 чисел*/
-//        int umnoj = Integer.valueOf(args[0] * args[1] * args[2]);
-//        System.out.println("Произведение 3 чисел равно: " +umnoj);
-
 //        /**Тест вывода переменной с циклом*/
 //      for (int i = 0; i < args.length; i++) {
 //          int varNew3 = Integer.valueOf(args[i]);
