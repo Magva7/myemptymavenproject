@@ -16,7 +16,7 @@ public class Main {
          * пошел от него, потом вставляем перед выражением int, чтобы было целое число*/
         int rnd = (int)(Math.random() * ((max - min) + 1)) + min;
 
-        System.out.println("Cлучайное целое число: " + rnd);
+        System.out.println("1Cлучайное целое число: " + rnd);
 
     }
 //    public static int rnd(int min, int max)
