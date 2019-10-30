@@ -1,24 +1,41 @@
 public class Main {
-    public static void main(String[] args) {
-//      System.out.println("Hello World!");
+    public static void main(String args[]) {
 
         /**Вызываем наш метод, который выводит простые числа*/
+        simple_number_method();
+        /**Тестовое сообщение для отладки*/
+        System.out.println("Отработал метод simple_number_method, которые выводит простые числа. Идём дальшe.");
+    }
 
-        /**Тут код нашего метода, который выводит простые числа*/
-        public static int average(int argSum, int countArg) {
+    /**Код метода, который выводит простые числа*/
+    static void simple_number_method() {
+        /**Тестовое сообщение для отладки*/
+        System.out.println("Запускается метод simple_number_method, которые выводит простые числа");
+    }
 
-            int average = argSum/countArg;
-            return average;
-        }
+
+//        int result = average(argSum, countArg);
+
+//        /**Если ничего не передали, то вывести сообщение, если передали, то вызываем метод,
+//         * который выводит среднее значение от переданных аргументов */
+//        if (args.length == 0) {
+//            System.out.println("Введите аргумент");
+//        } else {
+//            /**Тут будем вызывать наш метод, который выводит среднее значение от переданных аргументов*/
+//        }
 
 
-        //      System.out.println("Hello World!");
-        /**Задача - вывести сообщение если ничего не передали*/
-        if (args.length == 0) {
-            System.out.println("Введите аргумент");
-        } else {
-            /**Тут будем вызывать наш метод, который выводит среднее значение от переданных аргументов*/
-        }
+//        /**Выводим сумму аргументов, деленную на их количество*/
+//        System.out.println("Сумма аргументов, деленная на 3 равна: " +result);
+//    }
+
+//        /**Тут код нашего метода, который выводит простые числа*/
+//        public static void simple_number_method () {
+//            System.out.println("Тут будут выводиться простые числа");
+//        }
+
+
+
 
         //        /**Старое*/
 //        System.out.println("Всего аргументов в командной строке: " + args.length);
@@ -36,5 +53,4 @@ public class Main {
 //          int varNew4 = varNew3 + 10;
 //          System.out.println("Вывод переменной в цикле. arg[0] + 10 = " + varNew4);
 //      }
-}
     }
