@@ -5,7 +5,11 @@ public class Main {
         /**Вызываем наш метод, который выводит простые числа*/
 
         /**Тут код нашего метода, который выводит простые числа*/
-        
+        public static int average(int argSum, int countArg) {
+
+            int average = argSum/countArg;
+            return average;
+        }
 
 
         //      System.out.println("Hello World!");
