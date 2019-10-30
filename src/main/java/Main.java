@@ -15,6 +15,9 @@ public class Main {
         }
     }
 
+
+
+
     /**Код метода, который выводит простые числа*/
     static void simple_number_method() {
         /**Тестовое сообщение для отладки*/
@@ -75,12 +78,12 @@ public class Main {
     }
 }
 
-        /**Тут код нашего метода, который выводит среднее значние от передданных аргументов*/
-        public static int average(int argSum, int countArg) {
-
-            int average = argSum/countArg;
-            return average;
-        }
+//        /**Тут код нашего метода, который выводит среднее значние от передданных аргументов*/
+//        public static int average(int argSum, int countArg) {
+//
+//            int average = argSum/countArg;
+//            return average;
+//        }
 
 //        /**Выводим сумму аргументов, деленную на их количество*/
 //        System.out.println("Сумма аргументов, деленная на 3 равна: " +result);
