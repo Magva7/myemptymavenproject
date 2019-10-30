@@ -11,7 +11,7 @@ public class Main {
         } else {
             System.out.println("Введите аргумент");
         }
-
+        
 
         //        /**Старое*/
 //        System.out.println("Всего аргументов в командной строке: " + args.length);
