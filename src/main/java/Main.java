@@ -2,6 +2,17 @@ public class Main {
     public static void main(String[] args) {
 //      System.out.println("Hello World!");
 
+        //      System.out.println("Hello World!");
+        /**Задача - вывести для теста аргумент, который передали, если ничего не передали,
+         * то вывести сообщение. Схитрим и просто проверим длину массива, если 0, значит
+         * ничего не передали*/
+        if (args.length != 0) {
+            System.out.println("Выводим аргумент 1: " + args[0]);
+        } else {
+            System.out.println("Введите аргумент");
+        }
+
+
         //        /**Старое*/
 //        System.out.println("Всего аргументов в командной строке: " + args.length);
 //        System.out.println("Выводим аргумент 1: " +args[0]);
