@@ -1,5 +1,11 @@
 public class Main {
     public static void main(String args[]) {
+        /**Объявляем переменную, в которой будет храниться длина массива args, т.е. какое количество
+         * аргументов мы передали,чтобы потом мы знали, на сколько делить*/
+        int countArg = args.length;
+
+        /**Объявляем переменную, в которой будет храниться сумма введенных аргументов*/
+        int argSum = 0;
 
         /**Вызываем наш метод, который выводит простые числа*/
         simple_number_method();
@@ -11,13 +17,16 @@ public class Main {
         if (args.length == 0) {
             System.out.println("Введите аргумент");
         } else {
-            /**Тут будем вызывать наш метод, который выводит среднее значение от переданных аргументов*/
+            /**Вызываемт наш метод, который преобразует введенные аргументы в int и суммирует их*/
+            changeToInteger(args, argSum);
+            /**Вызываемт наш метод, который выводит среднее значение от переданных аргументов*/
+            calcArgSum(argSum, countArg);
         }
     }
 
-    /**Код метода, который переводит в цикле числа в int*/
-
-    /**Код метода, который выводит простые числа*/
+    /**
+     * Код метода, который выводит простые числа
+     */
     static void simple_number_method() {
         /**Тестовое сообщение для отладки*/
         System.out.println("Запускается метод simple_number_method, которые выводит простые числа");
@@ -30,13 +39,13 @@ public class Main {
 
         /**Делаем через цикл, у которого все внутри, пока с конкретными
          * числами, с переменными потом*/
-        for(int number=2;number<=100;number++){
+        for (int number = 2; number <= 100; number++) {
 
             /**Берем квадратный корень из переменной*/
             double square = Math.sqrt(number);
 
             /**Округляем*/
-            int square2 = (int)Math.round(square);
+            int square2 = (int) Math.round(square);
 
             /**Выводим для теста*/
             // System.out.println(square2);
@@ -58,10 +67,10 @@ public class Main {
 /**Для проверки остатков делаем цикл, отсчет в нем будет по переменной j,
  * которая будет каждую итерацию увеличиваться на 1 от 2 до кв. корня*/
 
-            for(int j=2; j<=square2; j++){
-                int ostatok = number%j;
+            for (int j = 2; j <= square2; j++) {
+                int ostatok = number % j;
 
-                if(ostatok == 0)
+                if (ostatok == 0)
                     counter++;
             }
 
@@ -70,20 +79,48 @@ public class Main {
              * мы его выводим, а если не 0, значит где-то поделилось без остатка,
              счетчик увеличился и значит число не простое и вы его не выводим, т.е.
              ничего не делаем*/
-            if(counter == 0){
+            if (counter == 0) {
                 System.out.println(number);
             }
         }
     }
+
+    /**
+     * Код метода, который переводит в цикле числа в int
+     */
+    public static int changeToInteger(String[] args, int argSum) {
+        /**Набиваем переменную argSum - переводим принятые снаружи в терминале аргументы в int через цикл.
+         * Переводим каждый элемент, перебирая их по порядку, каждую итерацию в переменную argSum
+         * будет прибавляться аргумент, переведенный в int*/
+        for (int i = 0; i < args.length; i++) {
+            argSum += Integer.valueOf(args[i]);
+
+            /**Выводим для теста, как меняется переменная argSum каждую итерацию*/
+            System.out.println("Аргументы argSum: " + argSum);
+        }
+
+        /**Тестовый вывод*/
+        System.out.println("argSum в конце метода changeToInteger перед return: " + argSum);
+        /**Отдаем наружу argSum*/
+        return argSum;
+    }
+
+
+    /**Код  метода, который выводит среднее значние от переданных аргументов
+     * @param argSum*/
+    static void calcArgSum(int argSum, int countArg) {
+        System.out.println("argSum2 на входе в метод calcArgSum: " + argSum);
+        int result = argSum/countArg;
+        System.out.println("Сумма аргументов, деленная их количество равна: " +result);
+    }
 }
 
-//        /**Тут код нашего метода, который выводит среднее значние от передданных аргументов*/
-//        public static int average(int argSum, int countArg) {
+//    public static int average(int argSum, int countArg) {
 //
 //            int average = argSum/countArg;
 //            return average;
 //        }
-
+//
 //        /**Выводим сумму аргументов, деленную на их количество*/
 //        System.out.println("Сумма аргументов, деленная на 3 равна: " +result);
 //    }
