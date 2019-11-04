@@ -63,15 +63,28 @@ String alphabet[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "k", "l", "m",
 //        System.out.println();
 
         /**Теперь пробуем через вложенный цикл*/
-        for(int count = 5;count<26;count +=5) {
+        for(int count = 5;count<=26;count +=5) {
 
-            for (int i = count - 5; i < count; i++) {
-                System.out.print(alphabet[i]);
+            /**Делаем условие, чтобы при последней итерации большоно цикла, когда count будет равно 25, вывелось
+            не 5 символов, а 3, вариант без условия выше*/
+            if(count!=25){
+                for (int i = count - 5; i < count; i++) {
+                    System.out.print(alphabet[i]);
+                }
+
+                /**Просто перенос строки после цикла, типа br, чтобы следующие 5 элементов вывелись на новой строке*/
+                System.out.println();
+
+                /**Выводим после конца цикла для теста счетчик каждый раз*/
+                System.out.println(count);
+            } else {
+//                System.out.println("count = Двадцать пять!");
+                for (int i = count - 5; i < (count-2); i++) {
+//                    System.out.print(alphabet[22]);
+                    System.out.print(alphabet[i]);
+                }
             }
 
-            /**Просто перенос строки после цикла, типа br, чтобы следующие 5 элементов вывелись на новой строке*/
-            System.out.println();
-            System.out.println(count);
         }
 
 
